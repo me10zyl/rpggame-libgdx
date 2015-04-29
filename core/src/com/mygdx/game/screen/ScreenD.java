@@ -165,6 +165,7 @@ public class ScreenD extends Screen {
 		}
 		if(isGameOver)
 		{
+//			font.draw(batch, "Game Over", camera.position.x - 32 * 9, camera.position.y - 32);
 			batch.draw(new TextureRegion(Assets.gameover), camera.position.x - camera.viewportWidth / 2, camera.position.y - camera.viewportHeight / 2, camera.viewportWidth, camera.viewportHeight);
 		}
 		batch.end();

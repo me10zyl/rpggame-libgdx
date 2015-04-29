@@ -24,7 +24,7 @@ public class Assets {
 	public static Animation lightlingMagic_animation;
 	public static TextureRegion diamond,staff;
 	public static Texture desktopthings1;
-	public static Texture gameover;
+	public static TextureRegion gameover;
 	public static void load() {
 		final Texture texture_hero = new Texture("images/rpg/hero.png");
 		for (int i = 0; i < herodown_textureRegion.length; i++)
@@ -65,6 +65,6 @@ public class Assets {
 		desktopthings1 = new Texture("images/rpg/desktopthings.png");
 		diamond = new TextureRegion(desktopthings1,32 * 3,0,32,32);
 		staff = new TextureRegion(desktopthings1,32 * 2 , 0,32,32);
-		gameover = new Texture("images/rpg/gameover.jpg");
+		gameover = new TextureRegion(new Texture("images/rpg/gameover.png"));
 	}
 }

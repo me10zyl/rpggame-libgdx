@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="32" tileheight="32" nextobjectid="17">
+ <tileset firstgid="1" name="stone" tilewidth="32" tileheight="32">
+  <image source="../input/wall-stone.png" width="96" height="128"/>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object id="0" x="-12" y="-16" width="62" height="29"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="13" name="xiaoer" tilewidth="32" tileheight="48">
+  <image source="../input/xiaoer.png" trans="ff00ff" width="128" height="192"/>
+ </tileset>
+ <tileset firstgid="29" name="dialog" tilewidth="349" tileheight="182">
+  <image source="../input/dialog.png" trans="ff00ff" width="349" height="182"/>
+ </tileset>
+ <layer name="块层 1" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJxjYWBgYKUhZgNidiDmoCHmHLVj1I4hagfHqB2DKj5G7Ri1Y9SOUTuoZQcXEHPTEPMAMQC6KBOG
+  </data>
+ </layer>
+ <objectgroup name="respawn">
+  <object id="1" name="respawn" x="796" y="260" width="5" height="87"/>
+ </objectgroup>
+ <objectgroup name="block">
+  <object id="2" x="0" y="1" width="7" height="796"/>
+  <object id="6" x="1" y="1" width="798" height="14"/>
+  <object id="7" x="788" y="0" width="12" height="254"/>
+  <object id="9" x="789" y="351" width="9" height="447"/>
+  <object id="10" x="2" y="788" width="796" height="7"/>
+  <object id="11" x="519" y="114" width="18" height="41"/>
+ </objectgroup>
+ <layer name="man" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFwwnwDrQDRsEoGAWjYBSMglFAFwAAcSgADg==
+  </data>
+ </layer>
+ <layer name="dialog" width="25" height="25" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4A+QHagHTAKRsEoGAWjYBQMIwAA3rwAHg==
+  </data>
+ </layer>
+ <objectgroup name="xiaoer">
+  <object id="12" name="xiaoer" x="514" y="106" width="29" height="54"/>
+ </objectgroup>
+ <objectgroup name="dialogObject">
+  <object id="15" name="1" x="212" y="112" width="228" height="33"/>
+ </objectgroup>
+</map>

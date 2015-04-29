@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="25" tilewidth="32" tileheight="32" nextobjectid="16">
+ <tileset firstgid="1" name="grass018" tilewidth="32" tileheight="32">
+  <image source="../input/grass018.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="13" name="grass026" tilewidth="32" tileheight="32">
+  <image source="../input/grass026.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="25" name="stone031" tilewidth="32" tileheight="32">
+  <image source="../input/stone031.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="37" name="036" tilewidth="32" tileheight="32">
+  <image source="../input/036.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="49" name="shiro_atmp003a" tilewidth="32" tileheight="32">
+  <image source="../input/shiro_atmp003a.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="61" name="Water20" tilewidth="32" tileheight="32">
+  <image source="../input/Water20.png" width="384" height="128"/>
+  <tile id="25">
+   <objectgroup draworder="index">
+    <object id="0" x="9" y="3" width="64" height="53"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="109" name="Flowers1" tilewidth="32" tileheight="32">
+  <image source="../input/Flowers1.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="121" name="Waterfall7" tilewidth="32" tileheight="32">
+  <image source="../input/Waterfall7.png" width="384" height="128"/>
+  <tile id="12">
+   <animation>
+    <frame tileid="12" duration="100"/>
+    <frame tileid="15" duration="100"/>
+    <frame tileid="18" duration="100"/>
+    <frame tileid="21" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="13">
+   <animation>
+    <frame tileid="13" duration="100"/>
+    <frame tileid="16" duration="100"/>
+    <frame tileid="19" duration="100"/>
+    <frame tileid="22" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="14">
+   <animation>
+    <frame tileid="14" duration="100"/>
+    <frame tileid="17" duration="100"/>
+    <frame tileid="20" duration="100"/>
+    <frame tileid="23" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="24">
+   <animation>
+    <frame tileid="24" duration="100"/>
+    <frame tileid="27" duration="100"/>
+    <frame tileid="30" duration="100"/>
+    <frame tileid="33" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="25">
+   <animation>
+    <frame tileid="25" duration="100"/>
+    <frame tileid="28" duration="100"/>
+    <frame tileid="31" duration="100"/>
+    <frame tileid="34" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="26">
+   <animation>
+    <frame tileid="26" duration="100"/>
+    <frame tileid="29" duration="100"/>
+    <frame tileid="32" duration="100"/>
+    <frame tileid="35" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="36">
+   <animation>
+    <frame tileid="36" duration="100"/>
+    <frame tileid="39" duration="100"/>
+    <frame tileid="42" duration="100"/>
+    <frame tileid="45" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="37">
+   <animation>
+    <frame tileid="37" duration="100"/>
+    <frame tileid="40" duration="100"/>
+    <frame tileid="43" duration="100"/>
+    <frame tileid="46" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="38">
+   <animation>
+    <frame tileid="38" duration="100"/>
+    <frame tileid="41" duration="100"/>
+    <frame tileid="44" duration="100"/>
+    <frame tileid="47" duration="100"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="169" name="nvmushi" tilewidth="32" tileheight="48">
+  <image source="../input/nvmushi.png" trans="ff00ff" width="128" height="192"/>
+ </tileset>
+ <tileset firstgid="185" name="dialog" tilewidth="349" tileheight="182">
+  <image source="../input/dialog.png" trans="ff00ff" width="349" height="182"/>
+ </tileset>
+ <layer name="块层 1" width="40" height="25">
+  <data encoding="base64" compression="zlib">
+   eJzt0jEOgCAQRNEFRUW4AfcvvKVTExsiIQOZ4mXbn8l6M/MiP20EDdLPU10GjqBhJTsEOAhavpxwQSRoUd/8fa3/fkOCvOgerUbvISJSKwQNo7zTEAna
+  </data>
+ </layer>
+ <layer name="块层 2" width="40" height="25">
+  <data encoding="base64" compression="zlib">
+   eJzt1DkOwjAURdFfUoKAwBKYg8QGaIEaaBkWEGZYTpbKk6BwYWM78Y8t5CedJnLiW4XIzWoaqs00imwBS1gZtv3q5Ohbwwa2gfbt4QBHy7aq+sTFvv/ts23T/WtcrGhTFZ0u20Los32Xa6oW0z6fyxTPQ+mLc78e9CUGPqOEDWEkMWa88wRnuBicnUD6bUoFU7Y6oivc4M54R5k94Akv3yFxzleHBjSJcpku0U73jTljHxqo9ZHLdAz6OJcAGqiNFpmkRN8bL7gqNQ==
+  </data>
+ </layer>
+ <layer name="块层 3" width="40" height="25">
+  <data encoding="base64" compression="zlib">
+   eJzVltEJwDAIRCVfHaADdP8p+1UIoskZPaEHQiHlfJgoitTqMqJbYwqtP/JlGaMe3fU78emqneVd4cF4exnvzr6I5PLutJvPyhlhY77HCBviVy3tjXJ5/89nVVxIrPiqtcof4WTPmJPeYPVuJhebr4JNf3t6NlHFhtw9iw9l+6R3mpVXlC8qnXuIvXOx+8UTyifSx5eZIRlGZI51zDdr30UZd2w3EBk+lNfTiofBF1VF/Ty9YRoMnQ==
+  </data>
+ </layer>
+ <layer name="guide" width="40" height="25">
+  <data encoding="base64" compression="zlib">
+   eJztzjEBAAAIA6D1b2JLW0wPSEACHXMdAAAAeGwBx2wAqg==
+  </data>
+ </layer>
+ <layer name="dialog" width="40" height="25">
+  <data encoding="base64" compression="zlib">
+   eJztzjEBAAAIA6D1b2Q7W0wPSEACNM11AAAAeGkB2+QAug==
+  </data>
+ </layer>
+ <objectgroup name="respawn">
+  <object id="1" name="teleportA" x="1" y="268" width="15" height="155"/>
+ </objectgroup>
+ <objectgroup name="block">
+  <object id="7" x="2" y="1" width="1277"/>
+  <object id="8" x="1277" y="1" height="802"/>
+  <object id="9" x="4" y="799" width="1275" height="2"/>
+  <object id="14" x="1124" y="83" width="26" height="40"/>
+ </objectgroup>
+ <objectgroup name="dialogObject">
+  <object id="12" name="dialog" x="723" y="74" width="252" height="41"/>
+ </objectgroup>
+ <objectgroup name="guideObject">
+  <object id="13" name="guide" x="1114" y="71" width="41" height="61"/>
+ </objectgroup>
+</map>

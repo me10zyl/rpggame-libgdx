@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="32" tileheight="32" nextobjectid="58">
+ <tileset firstgid="1" name="wood" tilewidth="32" tileheight="32">
+  <image source="../input/wall-wood.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="13" name="nvmage" tilewidth="32" tileheight="48">
+  <image source="../input/nvmage.png" trans="ff00ff" width="128" height="192"/>
+ </tileset>
+ <layer name="bg" width="25" height="25">
+  <data encoding="base64" compression="zlib">
+   eJxjYWBgYKUhZgNidiDmoCHmHLVjxNkxigdXfIzaMfjsYEHi4yufB7s/BosdnBTaM2rH4IkPetnBBcTcBDAPEWrw6QUAd8QTdg==
+  </data>
+ </layer>
+ <objectgroup name="block">
+  <object id="33" type="wall" x="95" y="479" width="223" height="14"/>
+  <object id="35" type="wall" x="308" y="478" width="12" height="33"/>
+  <object id="36" type="wall" x="310" y="574" width="9" height="208"/>
+  <object id="38" type="wall" x="1" y="482" width="31" height="10"/>
+  <object id="39" type="wall" x="-1" y="322" width="10" height="476"/>
+  <object id="40" type="wall" x="2" y="783" width="796" height="14"/>
+  <object id="44" type="wall" x="0" y="2" width="9" height="224"/>
+  <object id="45" type="wall" x="0" y="1" width="797" height="9"/>
+  <object id="47" type="wall" x="789" y="-3" width="13" height="195"/>
+  <object id="48" type="wall" x="790" y="288" width="11" height="289"/>
+  <object id="49" type="wall" x="792" y="673" width="7" height="121"/>
+ </objectgroup>
+ <objectgroup name="settings">
+  <object id="52" name="teleportA" x="494" y="413" width="73" height="62"/>
+  <object id="53" name="teleportB" x="1" y="237" width="10" height="70"/>
+  <object id="56" name="teleportD" x="790" y="582" width="10" height="89"/>
+  <object id="57" name="teleportC" x="784" y="212" width="10" height="41"/>
+ </objectgroup>
+</map>

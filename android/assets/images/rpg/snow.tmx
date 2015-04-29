@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="30" tilewidth="32" tileheight="32" nextobjectid="21">
+ <tileset firstgid="1" name="grass-snow" tilewidth="32" tileheight="32">
+  <image source="../input/grass-snow.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="13" name="Flowers1" tilewidth="32" tileheight="32">
+  <image source="../input/Flowers1.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="25" name="Flowers2" tilewidth="32" tileheight="32">
+  <image source="../input/Flowers2.png" width="96" height="128"/>
+ </tileset>
+ <tileset firstgid="37" name="water10" tilewidth="32" tileheight="32">
+  <image source="../input/water10.png" width="96" height="128"/>
+  <tile id="3">
+   <objectgroup draworder="index">
+    <object id="0" x="9" y="12" width="37" height="28"/>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <tileset firstgid="49" name="Water20" tilewidth="32" tileheight="32">
+  <image source="../input/Water20.png" width="384" height="128"/>
+ </tileset>
+ <tileset firstgid="97" name="Badmonur9" tilewidth="32" tileheight="32">
+  <image source="../input/Badmonur9.png" trans="ff00ff" width="128" height="256"/>
+ </tileset>
+ <layer name="块层 1" width="32" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztlMkRgDAMA02GI0AKof8KUQN5hCF4mfixb8uypWRmyZkJoOFtvU93+psXJKjeteiaxSJWJ62byGJ3mn+IUxTA3ejEr9R/5fpgfq++ofbYyLRkrcf9yFkj45WlyHD4Fr7wuQFSrgg8
+  </data>
+ </layer>
+ <layer name="块层 2" width="32" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztlUsKwjAQQGMvkAOoKIrF/wd0r67Vtbpz4f2v4GQxOIRpJ2mnxkUfPJAW8ibVRmNaWsrZpR4gkDxh+wiewHND62dEjgt4BW/k2j5xvy6viP4dfIBPxf5bca0D0dED+4rrx8zhGIDDBju5KX8fR+CYuW6V2lNw5jkXZtLCNRbg0nMl9K3R23+VPs6gwb/38feh0e9U6ON9jT6H1F+Dm4T9IjT6mWJfeie7nvgfhc+Xuo3sh5wHtEk/Z+Z7BvuGIrWxye2f68dC9889C27PvnWxpvh7kPbfNH7rF+2JcJ87C1MgzYl8AISQGRI=
+  </data>
+ </layer>
+ <objectgroup name="respawn">
+  <object id="3" name="teleportA" x="-2" y="201" width="22" height="151"/>
+ </objectgroup>
+ <objectgroup name="block">
+  <object id="5" x="575" y="194" width="91" height="114"/>
+  <object id="6" x="735" y="225" width="31" height="19"/>
+  <object id="7" x="290" y="131" width="29" height="16"/>
+  <object id="8" x="713" y="423" width="175" height="303"/>
+  <object id="9" x="968" y="544" width="54" height="85"/>
+  <object id="11" x="0" y="0" width="1019"/>
+  <object id="13" x="1021" y="3" height="979"/>
+  <object id="16" x="0" y="958" width="1018"/>
+  <object id="20" x="230" y="293" width="26" height="53"/>
+ </objectgroup>
+</map>

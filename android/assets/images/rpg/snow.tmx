@@ -23,6 +23,12 @@
  <tileset firstgid="97" name="Badmonur9" tilewidth="32" tileheight="32">
   <image source="../input/Badmonur9.png" trans="ff00ff" width="128" height="256"/>
  </tileset>
+ <tileset firstgid="129" name="dieman7" tilewidth="48" tileheight="64">
+  <image source="../input/dieman7.png" trans="ff00ff" width="192" height="256"/>
+ </tileset>
+ <tileset firstgid="145" name="peopleontheboat" tilewidth="32" tileheight="32">
+  <image source="../input/peopleontheboat.png" trans="ff00ff" width="128" height="128"/>
+ </tileset>
  <layer name="块层 1" width="32" height="30">
   <data encoding="base64" compression="zlib">
    eJztlMkRgDAMA02GI0AKof8KUQN5hCF4mfixb8uypWRmyZkJoOFtvU93+psXJKjeteiaxSJWJ62byGJ3mn+IUxTA3ejEr9R/5fpgfq++ofbYyLRkrcf9yFkj45WlyHD4Fr7wuQFSrgg8
@@ -47,4 +53,9 @@
   <object id="16" x="0" y="958" width="1018"/>
   <object id="20" x="230" y="293" width="26" height="53"/>
  </objectgroup>
+ <layer name="块层 3" width="32" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztzsENABAUBbC/uqvE0b52cPCEdoJWAcA5PR3gCzMdgE0jHXhISwe40gIlwQIu
+  </data>
+ </layer>
 </map>

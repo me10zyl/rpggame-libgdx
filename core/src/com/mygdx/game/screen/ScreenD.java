@@ -82,8 +82,7 @@ public class ScreenD extends Screen {
 				Rectangle rectangle = rectangleDialogObject.getRectangle();
 				if (rectangle.contains(camera.position.x - camera.viewportWidth/2 + screenX, map_height - screenY)) {
 					if (hero.getLevel() >= levelAtLeaset) {
-						System.out.println("hah");
-						isGameOver = true;
+						hero.setHasToken(true);
 						isDialogShow = false;
 					}
 				}
@@ -139,7 +138,8 @@ public class ScreenD extends Screen {
 		for (RectangleMapObject rectangleObject : collsionObjects
 				.getByType(RectangleMapObject.class)) {
 			Rectangle rectangle = rectangleObject.getRectangle();
-			CollisionDetecter.antiWalk(rectangle, hero);
+			CollisionDetecter collisionDetecter = new CollisionDetecter();
+			collisionDetecter.antiWalk(rectangle, hero);;
 		}
 	}
 	
@@ -155,12 +155,18 @@ public class ScreenD extends Screen {
 		hero.draw(batch);
 		if(isDialogShow)
 		{
-			if(hero.getLevel() >= levelAtLeaset)
+			if(hero.isHasToken())
 			{
-				font.draw(batch, "加入本门派", rectangleDialogObject.getRectangle().getX(), rectangleDialogObject.getRectangle().getY() + rectangleDialogObject.getRectangle().getHeight());
+				font.draw(batch, "您已学会本门秘技", rectangleDialogObject.getRectangle().getX(), rectangleDialogObject.getRectangle().getY() + rectangleDialogObject.getRectangle().getHeight());
 			}else
 			{
-				font.draw(batch, "您的等级不够,至少5", rectangleDialogObject.getRectangle().getX(), rectangleDialogObject.getRectangle().getY() + rectangleDialogObject.getRectangle().getHeight());
+				if(hero.getLevel() >= levelAtLeaset)
+				{
+					font.draw(batch, "加入本门派", rectangleDialogObject.getRectangle().getX(), rectangleDialogObject.getRectangle().getY() + rectangleDialogObject.getRectangle().getHeight());
+				}else
+				{
+					font.draw(batch, "您的等级不够,至少5", rectangleDialogObject.getRectangle().getX(), rectangleDialogObject.getRectangle().getY() + rectangleDialogObject.getRectangle().getHeight());
+				}
 			}
 		}
 		if(isGameOver)

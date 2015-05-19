@@ -138,7 +138,8 @@ public class ScreenB extends Screen {
 		for (RectangleMapObject rectangleObject : collsionObjects
 				.getByType(RectangleMapObject.class)) {
 			Rectangle rectangle = rectangleObject.getRectangle();
-			CollisionDetecter.antiWalk(rectangle, hero);
+			CollisionDetecter collisionDetecter = new CollisionDetecter();
+			collisionDetecter.antiWalk(rectangle, hero);;
 		}
 	}
 

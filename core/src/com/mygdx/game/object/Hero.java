@@ -9,6 +9,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.mygdx.game.Assets;
 import com.mygdx.game.Direction;
+import com.mygdx.game.object.equipment.Equipment;
 
 public class Hero extends AbstractObject {
 	public static Animation heroDown_animation;
@@ -21,9 +22,66 @@ public class Hero extends AbstractObject {
 	private float animationStateTime;
 	private int speed = 150;
 	private Array<Magic> magics = new Array<Magic>();
+	private Array<Equipment> equipments = new Array<Equipment>();
 	private int level = 0;
 	private int coin = 0;
 	private boolean hasStaff;
+	private boolean hasToken;
+	public boolean isHasToken() {
+		return hasToken;
+	}
+
+	public void setHasToken(boolean hasToken) {
+		this.hasToken = hasToken;
+	}
+
+	private int max_health = 1000;
+	public void setMax_health(int max_health) {
+		this.max_health = max_health;
+	}
+
+	public int getMax_health() {
+		return max_health;
+	}
+
+	private int health = max_health;
+	private float armor = 1.2f;
+	private int attack;
+	public int getHealth() {
+		return health;
+	}
+
+	public float getArmor() {
+		return armor;
+	}
+
+	public int getAttack() {
+		if(hasStaff)
+		{
+			return attack + 2;
+		}
+		return attack;
+	}
+
+	public void setHealth(int health) {
+		this.health = health;
+	}
+
+	public void setArmor(float f) {
+		this.armor = f;
+	}
+
+	public void setAttack(int attack) {
+		this.attack = attack;
+	}
+
+	public Array<Equipment> getEquipments() {
+		return equipments;
+	}
+
+	public void setEquipments(Array<Equipment> equipments) {
+		this.equipments = equipments;
+	}
 
 	public boolean isHasStaff() {
 		return hasStaff;
@@ -32,7 +90,12 @@ public class Hero extends AbstractObject {
 	public void setHasStaff(boolean hasStaff) {
 		this.hasStaff = hasStaff;
 	}
-
+	
+	public void subHealth(int value)
+	{
+		int realDamage = (int) ((value - this.armor * 0.2) < 0 ? 0 :  value - this.armor * 0.2);
+		this.health = (int) (this.health -  realDamage);
+	}
 	public Hero() {
 		width = 32;
 		height = 48;
@@ -43,7 +106,7 @@ public class Hero extends AbstractObject {
 		init();
 	}
 
-	public void castMagic() {
+	public void castLightlingMagic() {
 		final LightlingMagic lightlingMagic = new LightlingMagic(position);
 		Vector2 castPostion = new Vector2();
 		castPostion.x = position.x - lightlingMagic.getWidth() / 2 + width * 2;
@@ -68,9 +131,29 @@ public class Hero extends AbstractObject {
 		lightlingMagic.position.set(castPostion);
 		magics.add(lightlingMagic);
 	}
+	
+	public void castBuddhaLightMagic() {
+		final BuddhaLightMagic buddhaLightMagic = new BuddhaLightMagic(position);
+		Vector2 castPostion = new Vector2();
+		castPostion.x = position.x - buddhaLightMagic.getWidth() / 2 + width * 2;
+		castPostion.y = position.y - height / 2;
+		buddhaLightMagic.position.set(castPostion);
+		magics.add(buddhaLightMagic);
+		int addHealth = (int)Math.abs( (this.max_health * 0.1f));
+		if(addHealth + this.getHealth() < max_health)
+		{
+			this.health += addHealth;
+		}else
+		{
+			this.health = max_health;
+		}
+	}
 
 	@Override
 	public void draw(SpriteBatch batch) {
+		for (Magic magic : magics) {
+			magic.draw(batch);
+		}
 		switch (direction) {
 		case UP:
 			batch.draw(heroUp_animation.getKeyFrame(animationStateTime),
@@ -91,14 +174,12 @@ public class Hero extends AbstractObject {
 		default:
 			break;
 		}
-		for (Magic magic : magics) {
-			magic.draw(batch);
-		}
 		if(hasStaff)
 		{
 			batch.draw(Assets.staff,
 					this.position.x + 20, this.position.y + 16);
 		}
+		Assets.font.draw(batch, this.health + "", position.x - width / 2 - 7, position.y + height + 30);
 	}
 
 	public int getCoin() {
@@ -187,8 +268,14 @@ public class Hero extends AbstractObject {
 		} else {
 			this.animationStateTime = 0;
 		}
-		if (Gdx.input.isKeyJustPressed(Keys.SPACE) && hasStaff) {
-			castMagic();
+		if (Gdx.input.isKeyJustPressed(Keys.SPACE)) {
+			castLightlingMagic();
+		}
+		if (Gdx.input.isKeyJustPressed(Keys.ALT_LEFT)) {
+			if(hasToken)
+			{
+				castBuddhaLightMagic();
+			}
 		}
 
 		for (Magic magic : magics) {
@@ -196,6 +283,19 @@ public class Hero extends AbstractObject {
 				magics.removeValue(magic, true);
 			}
 			magic.update(deltaTime);
+		}
+	}
+	
+	public void putOnNewEquipment(Equipment e)
+	{
+		equipments.add(e);
+		for(Equipment equipment : equipments)
+		{
+			if(!equipment.isBeEquiped())
+			{
+				equipment.addAttribute();
+				equipment.setBeEquiped(true);
+			}
 		}
 	}
 }

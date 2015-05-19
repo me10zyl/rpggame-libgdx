@@ -19,7 +19,7 @@ import com.mygdx.game.object.SingletonHero;
 import com.mygdx.game.object.Teleport;
 
 public class Screen extends ScreenAdapter {
-	Hero hero;
+	static Hero hero;
 	OrthographicCamera camera,uiCamera;
 	SpriteBatch batch;
 	Game game;

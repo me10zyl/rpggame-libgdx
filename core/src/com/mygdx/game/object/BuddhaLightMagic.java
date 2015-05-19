@@ -7,17 +7,17 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.mygdx.game.Assets;
 
-public class LightlingMagic extends Magic {
+public class BuddhaLightMagic extends Magic {
 	private Animation animation;
 	private float animationStateTime;
 
-	public LightlingMagic(Vector2 postion) {
+	public BuddhaLightMagic(Vector2 postion) {
 		// TODO Auto-generated constructor stub
-		setWidth(Assets.lightlingMagic_textureRegion[0].getRegionWidth());
-		setHeight(Assets.lightlingMagic_textureRegion[0].getRegionHeight());
-		setAttack(1);
+		setWidth(Assets.buddhaLight_textureRegion[0].getRegionWidth());
+		setHeight(Assets.buddhaLight_textureRegion[0].getRegionHeight());
+		setAttack(0);
 		this.position.set(postion);
-		animation = Assets.lightlingMagic_animation;
+		animation = Assets.buddhaLight_animation;
 	}
 
 	public void update(float deltaTime) {

@@ -55,11 +55,11 @@ public class Coin extends AbstractObject {
 	public Coin(Vector2 position) {
 		// TODO Auto-generated constructor stub
 		isAlive = true;
-		width = 32;
-		height = 48;
 		rectangle = new Rectangle(position.x, position.y, width, height);
 		this.position.set(position);
 		texture = Assets.diamond;
+		height = texture.getRegionHeight();
+		width = texture.getRegionWidth();
 	}
 
 	public void update(float deltaTime) {

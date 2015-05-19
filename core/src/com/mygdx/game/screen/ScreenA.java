@@ -62,6 +62,7 @@ public class ScreenA extends Screen {
 		hero.position.x = respawnrRectangleMapObject.getRectangle().getX();
 		hero.position.y = respawnrRectangleMapObject.getRectangle().getY();
 		oldMap = ScreenFactory.Map.A;
+		hero.setHealth(hero.getMax_health());
 	}
 
 	@Override
@@ -114,7 +115,8 @@ public class ScreenA extends Screen {
 		for (RectangleMapObject rectangleObject : collsionObjects
 				.getByType(RectangleMapObject.class)) {
 			Rectangle rectangle = rectangleObject.getRectangle();
-			CollisionDetecter.antiWalk(rectangle, hero);
+			CollisionDetecter collisionDetecter = new CollisionDetecter();
+			collisionDetecter.antiWalk(rectangle, hero);
 		}
 	}
 }

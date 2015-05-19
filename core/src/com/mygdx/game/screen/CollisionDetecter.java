@@ -6,7 +6,18 @@ import com.mygdx.game.Direction;
 import com.mygdx.game.object.Hero;
 
 public class CollisionDetecter {
-	public static void antiWalk(Rectangle rectangle, Hero hero) {
+	private  OnCollisionListener onCollisionListener;
+	public  OnCollisionListener getOnCollisionListener() {
+		return onCollisionListener;
+	}
+	public  void setOnCollisionListener(OnCollisionListener onCollisionListener) {
+		this.onCollisionListener = onCollisionListener;
+	}
+	public interface OnCollisionListener
+	{
+		public void onCollision();
+	}
+	public void antiWalk(Rectangle rectangle, Hero hero) {
 		Hero preHero = new Hero();
 		preHero.position.set(hero.position);
 		preHero.velocity.set(hero.velocity);
@@ -21,6 +32,10 @@ public class CollisionDetecter {
 		}
 		preHero.position.mulAdd(preHero.velocity, Gdx.graphics.getDeltaTime());
 		if (rectangle.overlaps(preHero.getRectangle())) {
+			if(onCollisionListener != null)
+			{
+				onCollisionListener.onCollision();
+			}
 			hero.velocity.set(0, 0);
 			if (hero.getDirection() == Direction.UP) {
 				final float newY = rectangle.getY() - hero.getHeight() - 2;
